@@ -1,6 +1,7 @@
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 import matplotlib.pyplot as plt
+from sklearn.metrics import accuracy_score, precision_score, recall_score
 
 # define the dataset
 X = np.array([[70], [85], [50], [65], [80]])
@@ -22,6 +23,17 @@ predicted_class = knn.predict(new_score)
 
 print("Predicted class is: ", predicted_class)
 
+
+# Calculate accuracy, precision, and recall
+y_pred = knn.predict(X)
+accuracy = accuracy_score(y, y_pred)
+precision = precision_score(y, y_pred, pos_label='YES')
+recall = recall_score(y, y_pred, pos_label='YES')
+
+# Print the evaluation metrics
+print("Accuracy:", accuracy)
+print("Precision:", precision)
+print("Recall:", recall)
 
 # Plot the dataset and the new student
 plt.scatter(X, y)
