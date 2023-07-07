@@ -24,8 +24,9 @@ print("Predicted class is: ", predicted_class)
 
 
 # plot the data set and new points
-plt.scatter(X[:0], X[:1], c=y)
-plt.scatter(new_point[:0], new_point[:1], c=predicted_class, marker='x', s=100)
+plt.scatter(X[:, 0], X[:, 1], c=y)
+plt.scatter(new_point[:, 0], new_point[:, 1],
+            c=predicted_class, marker='x', s=100)
 plt.xlabel('X')
 plt.ylabel('Y')
 plt.title('KNN Classification')
