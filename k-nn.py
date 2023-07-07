@@ -3,8 +3,8 @@ from sklearn.neighbors import KNeighborsClassifier
 import matplotlib.pyplot as plt
 
 # define the dataset
-X = np.array([[2, 3], [4, 2], [6, 4], [4, 6], [8, 2]])
-y = np.array(['Red', 'Red', 'Blue', 'Blue', 'Blue'])
+X = np.array([[2, 3], [4, 2], [6, 4], [4, 6], [4, 5], [7, 5], [5, 7]])
+y = np.array(['Red', 'Blue', 'Blue', 'Red', 'Red', 'Red', 'Blue'])
 
 # create a knn classifier with K=3
 knn = KNeighborsClassifier(n_neighbors=3)
