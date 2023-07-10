@@ -27,8 +27,8 @@ print("Predicted class is: ", predicted_class)
 # Calculate accuracy, precision, and recall
 y_pred = knn.predict(X)
 accuracy = accuracy_score(y, y_pred)
-precision = precision_score(y, y_pred, pos_label='YES')
-recall = recall_score(y, y_pred, pos_label='YES')
+precision = precision_score(y, y_pred, pos_label='NO')
+recall = recall_score(y, y_pred, pos_label='NO')
 
 # Print the evaluation metrics
 print("Accuracy:", accuracy)
